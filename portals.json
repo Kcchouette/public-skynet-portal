@@ -33,34 +33,41 @@
 		"comment": "Broken, and you need to add a 9-code to upload"
 	},
 	{
-		"portal_url": "https://skydrain.net/",
+		"portal_url": "https://skydrain.net",
 		"portal_file_fieldname": "file",
 		"portal_directory_file_fieldname": "files[]",
 		"comment": "Broken, and you need to add the date format YYYY-MM-DD%20HH:MM-SS.MMMM to upload"
 	},
 	{
-		"portal_url": "https://skynet.luxor.tech/",
+		"portal_url": "https://skynet.luxor.tech",
 		"portal_file_fieldname": "file",
 		"portal_directory_file_fieldname": "files[]",
 		"comment": "Nginx is broken for upload"
 	},
 	{
-		"portal_url": "https://skynethub.io/",
+		"portal_url": "https://skynethub.io",
 		"portal_upload_path": "skynet/skyfile",
 		"portal_file_fieldname": "file",
 		"portal_directory_file_fieldname": "files[]",
 		"comment": "None"
 	},
 	{
-		"portal_url": "https://skynet.utxo.no/",
+		"portal_url": "https://skynet.utxo.no",
 		"portal_file_fieldname": "file",
 		"portal_directory_file_fieldname": "files[]",
 		"comment": "Nginx is broken for upload"
 	},
 	{
-		"portal_url": "https://vault.lightspeedhosting.com/",
+		"portal_url": "https://vault.lightspeedhosting.com",
 		"portal_file_fieldname": "file",
 		"portal_directory_file_fieldname": "files[]",
 		"comment": "No more siacoin"
+	},
+	{
+		"portal_url": "https://skyportal.xyz",
+		"portal_upload_path": "skynet/skyfile",
+		"portal_file_fieldname": "file",
+		"portal_directory_file_fieldname": "files[]",
+		"comment": "None"
 	}
 ]
