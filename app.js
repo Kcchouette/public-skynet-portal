@@ -6,11 +6,11 @@ function checkIsOnline(portal_url) {
     requestPortalSkyHash.open('HEAD', portal_url + "/" + SKY_HASH);
     let startTime = (new Date()).getTime();
     requestPortalSkyHash.send();
-    requestPortalSkyHash.onreadystatechange = function () {
+    requestPortalSkyHash.onload = function () {
 
         console.debug(portal_url, this.readyState, requestPortalSkyHash.status, requestPortalSkyHash.getAllResponseHeaders(), requestPortalSkyHash.getResponseHeader("skynet-file-metadata"));
 
-        if ((this.readyState === 2 || this.readyState === 4) && requestPortalSkyHash.status === 200) {   
+        if (this.readyState === 4 && requestPortalSkyHash.status === 200) {   
             let endTime = (new Date()).getTime();
             document.getElementById(portal_url + "-duration").innerHTML = endTime - startTime;
             if(requestPortalSkyHash.getResponseHeader("skynet-file-metadata") === CONTENT_SKY_HASK) {
@@ -53,7 +53,7 @@ function fetchPortals() {
     let requestPortalsList = new XMLHttpRequest();
     requestPortalsList.open('GET', "./portals.json");
     requestPortalsList.send();
-    requestPortalsList.onreadystatechange = function () {
+    requestPortalsList.onload = function () {
         if (this.readyState === 4 && (requestPortalsList.status === 200 || requestPortalsList.status === 304)) {
             let portals = JSON.parse(requestPortalsList.responseText);
             checkPortals(portals);
